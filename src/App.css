@@ -27,3 +27,11 @@ letter-spacing: 0.2rem;
 
   color:var( --lightGreen);
 }
+.navlinks{
+
+margin-left: 100px;
+}
+.cart{
+
+  margin-left: auto;
+}

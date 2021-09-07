@@ -8,7 +8,9 @@ import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
+import Contactus from "./components/Contactus";
 import DefaultPage from "./components/DefaultPage";
+
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route
-          path="/productlist"
+          path="/shop"
           render={() => (
             <React.Fragment>
               <NavBar />
@@ -42,6 +44,15 @@ function App() {
             <React.Fragment>
               <NavBar />
               <Cart />
+            </React.Fragment>
+          )}
+        />
+         <Route
+          exact path="/contactus"
+          render={() => (
+            <React.Fragment>
+              <Contactus/>
+              
             </React.Fragment>
           )}
         />
