@@ -32,13 +32,13 @@ export default class NavBar extends Component {
             <React.Fragment>
                
 
-                <Navbar className="nav "light sticky="sticky " expand="sm"   >
+                <Navbar className="navbar "light sticky="sticky " expand="sm"   >
                 
                         <NavbarBrand className="ms-5" href="/"> <img src={logo3} alt="logo" className="navbar-brand"></img></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="navbar-expand-md navbar-light  ms-auto align-items-center ">
-                                <NavItem>
+                                <NavItem className="nav-item">
                                     <NavLink className="nav-link" to="/">
                                          Home
                                     </NavLink>
@@ -57,7 +57,7 @@ export default class NavBar extends Component {
                                     <NavLink className="nav-link "  to="/cart">
                                     <ButtonContainer> 
                                      
-                                        <i className=" fas fa-cart-plus">
+                                        <i className=" fas fa-cart-arrow-down">
 
                                         
                   </i> Cart</ButtonContainer> 

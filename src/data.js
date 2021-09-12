@@ -1,7 +1,7 @@
 export const storeProducts = [
     {
       id: 1,
-      title: "Heels1",
+      title: "Heels 1",
       img: "img/product-1b.jpg",
       price: 10,
       brand: "heelsunknown",
@@ -13,7 +13,7 @@ export const storeProducts = [
     },
     {
       id: 2,
-      title: "Heels2",
+      title: "Heels 2",
       img: "img/product-2b.jpg",
       price: 16,
       company: "unknownheels",
@@ -25,7 +25,7 @@ export const storeProducts = [
     },
     {
       id: 3,
-      title: "Heels3",
+      title: "Heels 3",
       img: "img/product-3b.jpg",
       price: 16,
       company: "unknownheels",
@@ -37,7 +37,7 @@ export const storeProducts = [
     },
     {
       id: 4,
-      title: "Heels4",
+      title: "Heels 4",
       img: "img/product-4b.jpg",
       price: 16,
       company: "unknownheels",
@@ -49,7 +49,7 @@ export const storeProducts = [
     },
     {
       id: 5,
-      title: "Heels5",
+      title: "Heels 5",
       img: "img/product-5b.jpg",
       price: 16,
       company: "unknownheels",
@@ -61,7 +61,7 @@ export const storeProducts = [
     },
     {
       id: 6,
-      title: "Heels6",
+      title: "Heels 6",
       img: "img/product-6b.jpg",
       price: 16,
       company: "unknownheels",
@@ -76,7 +76,7 @@ export const storeProducts = [
   
   export const detailProduct = {
     id: 1,
-    title: "Heels",
+    title: "Heels 1",
     img: "img/product-1.png",
     price: 10,
     company: "unknown shoe ",
