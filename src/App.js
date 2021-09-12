@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import ProductList from "./components/ProductList";
 import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
@@ -12,8 +13,10 @@ import Contactus from "./components/Contactus";
 import DefaultPage from "./components/DefaultPage";
 
 
-function App() {
-  return (
+
+class App extends Component {
+  render()
+ {return (
     <React.Fragment>
       
       {/* Added routes NavBar displays on all pages except the default 404 page and the homepage. For the homepage I want a simple banner image  */}
@@ -21,7 +24,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route
-          path="/shop"
+           exact path="/shop"
           render={() => (
             <React.Fragment>
               <NavBar />
@@ -39,7 +42,7 @@ function App() {
           )}
         />
         <Route
-          path="/cart"
+          exact path="/cart"
           render={() => (
             <React.Fragment>
               <NavBar />
@@ -51,7 +54,9 @@ function App() {
           exact path="/contactus"
           render={() => (
             <React.Fragment>
+              <NavBar />
               <Contactus/>
+              
               
             </React.Fragment>
           )}
@@ -62,5 +67,5 @@ function App() {
     </React.Fragment>
   );
 }
-
+}
 export default App;

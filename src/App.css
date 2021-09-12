@@ -10,6 +10,7 @@ body{
   font-family: 'Kaisei HarunoUmi', sans-serif !important;
   background: var(--mainCream) !important;
   color:var(--mainDark) !important;
+
 }
 
 .title{
@@ -27,11 +28,36 @@ letter-spacing: 0.2rem;
 
   color:var( --lightGreen);
 }
-.navlinks{
+.nav-link{
 
-margin-left: 100px;
+  color:var(--mainDark) !important;
+  font-size:1.3rem;
 }
-.cart{
 
-  margin-left: auto;
+.nav{
+
+  background-color: var(--lightGreen);
+  
+
+ margin-top: 0 !important;
+
+ 
+
+
+}
+.text-title{
+
+  font-family: 'Kaisei HarunoUmi', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  color:black;
+    
+}
+
+
+/* cards in product page  */
+.img-container {
+ background-color:var( --mainCream)!important;
+
 }
