@@ -7,7 +7,7 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <div className="col-9 mx-auto col-md-6 col-lg-4 my-3 styleproduct">
+      <div className="col-9 mx-auto col-md-6 col-lg-4 my-3 ">
         <div className="card">
           <div
             className="img-container p-0   "
@@ -33,15 +33,16 @@ export default class Product extends Component {
             </button>
           </div>
           <div className="card-footer d-flex justify-content-between ">
-            <p>
-              <h5>{title}</h5>
-            </p>
-            <p>
-              <h5>
-                <span className="ms-5">$</span>
-                {price}
+            <h5 className=" mb-0 me-5">
+        {title } 
+            </h5>
+            
+              <h5 mb-0 className="ml-5 mx-auto ">
+                <span className="me-1">$</span>
+               
+               {price}
               </h5>
-            </p>
+            
           </div>
         </div>
       </div>
