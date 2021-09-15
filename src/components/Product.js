@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+
 import { ProductConsumer } from "../context";
+
 
 export default class Product extends Component {
   render() {
@@ -50,4 +51,6 @@ export default class Product extends Component {
   }
 }
 
-// const ProductStyled = styled.div``;
+
+
+

@@ -73,6 +73,8 @@ color:var(--mainDark) !important;
  border: transparent;
  position:relative;
  overflow:hidden;
+ 
+
 
 
 }
@@ -100,6 +102,8 @@ overflow:hidden;
   background-color:transparent!important;
   transition:all .5s linear;  
   position: relative;
+  
+ 
 
 }
 .card:hover {border: rgb(218, 199, 164,.2)  !important; box-shadow: 4px 4px 5px 0px rgba(218, 199, 164);}
@@ -152,7 +156,8 @@ overflow:hidden;
   background: rgb(233, 161, 5);
   border:none;
   color:white;
-  transform:translate(100%,100%)
+  transform:translate(100%,100%);
+  transition: all 1s linear;
 }
 .cart-btn:hover{
 
@@ -160,6 +165,7 @@ overflow:hidden;
   background:rgb(247, 244, 244,.5);
   transform:scale(1.2);
   overflow: hidden;
+  cursor:pointer;
 
 
 }
