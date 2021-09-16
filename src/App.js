@@ -11,6 +11,7 @@ import Cart from "./components/Cart";
 import Home from "./components/Home";
 import Contactus from "./components/Contactus";
 import DefaultPage from "./components/DefaultPage";
+import Modal from "./components/Modal";
 
 
 
@@ -20,7 +21,7 @@ class App extends Component {
     <React.Fragment>
       
       {/* Added routes NavBar displays on all pages except the default 404 page and the homepage. For the homepage I want a simple banner image  */}
-
+      
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route
@@ -28,6 +29,7 @@ class App extends Component {
           render={() => (
             <React.Fragment>
               <NavBar />
+            
               <ProductList />
             </React.Fragment>
           )}
@@ -37,7 +39,9 @@ class App extends Component {
           render={() => (
             <React.Fragment>
               <NavBar />
+              
               <ProductDetails />
+              
             </React.Fragment>
           )}
         />
@@ -64,7 +68,13 @@ class App extends Component {
 
         <Route component={DefaultPage} />
       </Switch>
+
+    
+      <Modal/>
     </React.Fragment>
+     
+
+
   );
 }
 }
