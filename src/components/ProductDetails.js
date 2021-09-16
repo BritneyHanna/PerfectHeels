@@ -8,25 +8,41 @@ export default class ProductDetails extends Component {
             <ProductConsumer>
                 {(value)=>{
 
-                  const {id,title,img,price,company,info,inCart} = value.detailProduct;
+                  const {id,title,img,price,info,inCart} = value.detailProduct;
                   return(
                         <React.Fragment>
 
-<div className="col-lg-6 my-5 mx-auto d-flex justify-content-center text-center  ">
+<div className="col-lg-6 my-5 mx-auto d-flex justify-content-center ">
 <div className="card h-200 detailcard " >
     <div>
   <img src={img} class="card-img-top" alt="shoepic"/>
   </div>
   <div className="card-body">
-    <h5 className="card-title">{title}</h5>
-    <p className="card-text">{info}</p>
-    <span>
-    <Link to="shop">
-    <ButtonContainer> Back to Products</ButtonContainer>  
-    </Link>    
-    <ButtonContainer> Add to Cart </ButtonContainer>  
-    </span>
+    <h2 className="card-title text-center ">{title}</h2>
+    <p className="card-text ">{info}</p>
+ 
+    <div className="card-text text-end fst-italic fw-bold"> <h3> Price:  ${price}</h3> </div>
+
+
+
   </div>
+</div>
+</div>
+<div className="row "> 
+<div className="col text-center">
+<Link to="shop">
+    <ButtonContainer
+    
+    > Back to Products</ButtonContainer>  
+    </Link> 
+
+    <ButtonContainer disabled={inCart?true:false}
+    onClick={()=>{
+      value.addToCart(id)
+
+    }}
+    
+    > {inCart?'In Cart': 'Add to Cart'} </ButtonContainer>  
 </div>
 </div>
 

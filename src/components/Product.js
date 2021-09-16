@@ -10,11 +10,14 @@ export default class Product extends Component {
     return (
       <div className="col-9 mx-auto col-md-6 col-lg-4 my-3 ">
         <div className="card productcard">
-          <div
+          <ProductConsumer >
+
+            {(value)=>(<div
             className="img-container p-0   "
-            onClick={() => {
-              console.log("filler method for clicking image");
-            }}
+
+            onClick={() => value.handleDetail(id)
+              
+          }
           >
             <Link to="/productdetails">
               <img src={img} alt="shoe" className="card-img-top" />
@@ -23,7 +26,7 @@ export default class Product extends Component {
               className="cart-btn"
               disabled={inCart ? true : false}
               onClick={() => {
-                console.log("filler method for clicking button");
+          value.addToCart(id);
               }}
             >
               {inCart ? (
@@ -32,7 +35,10 @@ export default class Product extends Component {
                 <i className="fas fa-cart-arrow-down" />
               )}
             </button>
-          </div>
+          </div>)}
+          
+          </ProductConsumer>
+ 
           <div className="card-footer d-flex justify-content-between ">
             <h5 className=" mb-0 me-5">
         {title } 

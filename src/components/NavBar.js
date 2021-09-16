@@ -34,7 +34,7 @@ export default class NavBar extends Component {
 
                <Navbar light expand="md">
                 <div className="container">
-                        <NavbarBrand className="ms-5" href="/"> <img src={logo3} alt="logo" className="navbar-brand"></img></NavbarBrand>
+                        <NavbarBrand className="ms-auto" href="/"> <img src={logo3} alt="logo" className="navbar-brand"></img></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav className="ms-auto" navbar>
