@@ -9,7 +9,7 @@ export default class Product extends Component {
     const { id, title, img, price, inCart } = this.props.product;
     return (
       <div className="col-9 mx-auto col-md-6 col-lg-4 my-3 ">
-        <div className="card">
+        <div className="card productcard">
           <div
             className="img-container p-0   "
             onClick={() => {

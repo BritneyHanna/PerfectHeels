@@ -10,45 +10,30 @@ export default class ProductDetails extends Component {
 
                   const {id,title,img,price,company,info,inCart} = value.detailProduct;
                   return(
+                        <React.Fragment>
 
-                   <div className="container py-5">
-                       {/* title */}
-                       <div className="row">
-
-                        <div className="col-10 mx-auto text-center  my-3">
-                        <h1 className="fw-bold">{title}</h1>
-                        </div>
-
-                       </div>
-
-                       {/* Productinfo */}
-                       <div className="row">
-                        <div className="col-xs-12 col-md-6 mx-auto my-3">
-                            <img src={img} alt="shoe pic"/>
-                        </div>
-                        <div className="col-xs-12 col-md-6 mx-auto my-3">
-                            <p>{info}</p>
-                            <div><Link to="/shop">
-                               <ButtonContainer> Back To Products Page</ButtonContainer>     
-                               </Link> </div>
-                               <div>   
-                               <ButtonContainer> Add to Cart</ButtonContainer>      
-                               </div>
-                               
-                        </div>
-                       </div>
-                       <div className="row align-items-center mb-0">
-                           <div className="col-md-2  ">
-                               <h3 className="fst-italic">Price : ${price}</h3></div>
-                              
-                               
-                          
-
-                       </div>
+<div className="col-lg-6 my-5 mx-auto d-flex justify-content-center text-center  ">
+<div className="card h-200 detailcard " >
+    <div>
+  <img src={img} class="card-img-top" alt="shoepic"/>
+  </div>
+  <div className="card-body">
+    <h5 className="card-title">{title}</h5>
+    <p className="card-text">{info}</p>
+    <span>
+    <Link to="shop">
+    <ButtonContainer> Back to Products</ButtonContainer>  
+    </Link>    
+    <ButtonContainer> Add to Cart </ButtonContainer>  
+    </span>
+  </div>
+</div>
+</div>
 
 
 
-                   </div>
+                        </React.Fragment>  
+  
                   );
                 }}
 

@@ -77,7 +77,7 @@ export const storeProducts = [
   export const detailProduct = {
     id: 1,
     title: "Heels 1",
-    img: "img/product-1b.jpg",
+    img: "img/product-6b.jpg",
     price: 10,
     company: "unknown shoe ",
     info:
