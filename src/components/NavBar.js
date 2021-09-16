@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import {ButtonContainer} from"./Button";
+import {ButtonContainerCart} from"./Button";
 
 
 
@@ -32,12 +32,12 @@ export default class NavBar extends Component {
             <React.Fragment>
                
 
-                <Navbar className="navbar "light sticky="sticky " expand="sm"   >
-                
+               <Navbar light expand="md">
+                <div className="container">
                         <NavbarBrand className="ms-5" href="/"> <img src={logo3} alt="logo" className="navbar-brand"></img></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav className="navbar-expand-md navbar-light  ms-auto align-items-center ">
+                        <Nav className="ms-auto" navbar>
                                 <NavItem className="nav-item">
                                     <NavLink className="nav-link" to="/">
                                          Home
@@ -55,17 +55,19 @@ export default class NavBar extends Component {
                                 </NavItem>
                                 <NavItem >
                                     <NavLink className="nav-link "  to="/cart">
-                                    <ButtonContainer> 
+                                      
+                                    <ButtonContainerCart> 
                                      
                                         <i className=" fas fa-cart-arrow-down">
 
                                         
-                  </i> Cart</ButtonContainer> 
+                  </i> Cart</ButtonContainerCart> 
+
                                     </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
-                    
+                        </div>
                 </Navbar>
             </React.Fragment>
         );
