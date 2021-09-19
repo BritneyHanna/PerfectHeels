@@ -74,7 +74,7 @@ this.setState(()=>{
 
 };
 
-icrement=(id)=>{
+increment=(id)=>{
   console.log('filler text for increment method')
 };
 

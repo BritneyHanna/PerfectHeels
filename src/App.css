@@ -174,3 +174,26 @@ overflow:hidden;
  background-color: rgb(207, 133, 22,.5) !important;
 
 }
+.btn-decrease {
+
+  background:transparent;
+  font-size:1rem !important;
+  color: var(--mainDark);
+  border-radius:0 !important;
+  border:.1rem solid var(--mainDark) !important;
+
+}
+
+.btn-decrease:hover{
+
+  background: #442406 !important;
+
+ color: var(--mainCream) !important;
+
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size:1.5rem;
+  color: var(--mainYellow);
+}
