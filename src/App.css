@@ -197,3 +197,34 @@ overflow:hidden;
   font-size:1.5rem;
   color: var(--mainYellow);
 }
+
+
+.site-footer
+{background-image: linear-gradient(rgba(221, 210, 49, 0.2), #FFFDD0);
+  padding: 20px 0;}
+  a:link {
+    color:var(--mainDark);
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+  
+  a:visited {
+    color: rgb(221, 114, 14);
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+  
+  a:hover {
+    color: rgb(190, 56, 3) !important;
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+ 
+
+ 

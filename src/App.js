@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import Contactus from "./components/Contactus";
 import DefaultPage from "./components/DefaultPage";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 
 
 
@@ -31,6 +32,7 @@ class App extends Component {
               <NavBar />
             
               <ProductList />
+              <Footer/>
             </React.Fragment>
           )}
         />
@@ -41,6 +43,7 @@ class App extends Component {
               <NavBar />
               
               <ProductDetails />
+              <Footer/>
               
             </React.Fragment>
           )}
@@ -51,6 +54,7 @@ class App extends Component {
             <React.Fragment>
               <NavBar />
               <Cart />
+              <Footer/>
             </React.Fragment>
           )}
         />
@@ -60,6 +64,7 @@ class App extends Component {
             <React.Fragment>
               <NavBar />
               <Contactus/>
+              <Footer/>
               
               
             </React.Fragment>
