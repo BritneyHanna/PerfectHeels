@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ProductList from "./components/ProductList";
 import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import Home from "./components/Home";
 import Contactus from "./components/Contactus";
 import DefaultPage from "./components/DefaultPage";

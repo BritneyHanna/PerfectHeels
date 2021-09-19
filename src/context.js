@@ -8,9 +8,14 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart:[],
-    modalOpen:true,
-    modalProduct:detailProduct
+    // cart:[],
+    shoppingcart:storeProducts,
+    modalOpen:false,
+    modalProduct:detailProduct,
+    cartSubTotal:0,
+    cartTax:0,
+    cartTotal:0,
+
   };
 
   componentDidMount(){
@@ -49,7 +54,7 @@ addToCart=(id)=>{
   const price=product.price;
   product.total= price;
 this.setState(()=>{
-  return {products:tempProducts,cart:[...this.state.cart,product]};
+  return {products:tempProducts,shoppingcart:[...this.state.shoppingcart,product]};
 },()=>{console.log(this.state)})
 
 
@@ -65,12 +70,37 @@ openModal=(id)=>{
 closeModal = ()=>{
 this.setState(()=>{
   return {modalOpen:false}
-})
+});
 
+};
+
+icrement=(id)=>{
+  console.log('filler text for increment method')
+};
+
+decrement=(id)=>{
+  console.log('filler text for decrement method')
+};
+
+removeItem=(id)=>{
+  console.log('filler text for remove item method')
+};
+
+clearCart=()=>{
+
+  console.log('filler text for clear cart function')
 }
+
+
+
+
+
+
   render() {
     return (
-      <ProductContext.Provider value={{...this.state,handleDetail:this.handleDetail,addToCart:this.addToCart,openModal:this.openModal,closeModal:this.closeModal}
+      <ProductContext.Provider value={{...this.state,handleDetail:this.handleDetail, 
+        addToCart:this.addToCart,openModal:this.openModal,closeModal:this.closeModal, 
+        cart:this.cart,increment:this.icrement, decrement:this.decrement,removeItem:this.removeItem,clearCart:this.clearCart }
 
 
       }>
