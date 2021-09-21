@@ -233,4 +233,14 @@ overflow:hidden;
   }
  
 
- 
+ .btncheckout {
+  border-radius: 12%;
+  font-size:1.5rem;
+  padding: .2rem;
+  border-color: transparent!important;
+  
+ }
+ .btncheckout:hover{
+
+  color:rgb(252, 249, 245) !important;
+ }
