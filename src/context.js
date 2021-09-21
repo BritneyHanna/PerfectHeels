@@ -9,7 +9,7 @@ class ProductProvider extends Component {
     products: [],
     detailProduct: detailProduct,
     // cart:[],
-    shoppingcart:storeProducts,
+    shoppingcart:[],
     modalOpen:false,
     modalProduct:detailProduct,
     cartSubTotal:0,
@@ -55,7 +55,7 @@ addToCart=(id)=>{
   product.total= price;
 this.setState(()=>{
   return {products:tempProducts,shoppingcart:[...this.state.shoppingcart,product]};
-},()=>{console.log(this.state)})
+},()=>{this.addTotals()})
 
 
 
@@ -83,14 +83,43 @@ decrement=(id)=>{
 };
 
 removeItem=(id)=>{
-  console.log('filler text for remove item method')
+  let tempProducts=[...this.state.products];
+  let tempCart= [...this.state.shoppingcart];
+  tempCart=tempCart.filter(item=>item.id!==id);
+  
+
 };
 
 clearCart=()=>{
 
-  console.log('filler text for clear cart function')
+ this.setState(()=>{
+   return{shoppingcart: []};
+ },()=>{
+ this.setProducts();
+ this.addTotals();
+
+ });
+ 
+
+ 
 }
 
+addTotals=()=>{
+ let subTotal=0;
+ this.state.shoppingcart.map(item=>(subTotal += item.total));
+ const tempTax=subTotal*.06;
+ const tax= parseFloat(tempTax.toFixed(2));
+ const total =subTotal +tax
+ this.setState(()=>{
+   return{
+    cartSubTotal:subTotal,
+     cartTax:tax,
+     cartTotal:total
+
+   }
+ })
+
+}
 
 
 
@@ -100,7 +129,7 @@ clearCart=()=>{
     return (
       <ProductContext.Provider value={{...this.state,handleDetail:this.handleDetail, 
         addToCart:this.addToCart,openModal:this.openModal,closeModal:this.closeModal, 
-        cart:this.cart,increment:this.icrement, decrement:this.decrement,removeItem:this.removeItem,clearCart:this.clearCart }
+        cart:this.cart,increment:this.increment, decrement:this.decrement,removeItem:this.removeItem,clearCart:this.clearCart }
 
 
       }>

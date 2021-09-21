@@ -200,12 +200,17 @@ overflow:hidden;
 
 
 .site-footer
-{background-image: linear-gradient(rgba(221, 210, 49, 0.2), #FFFDD0);
+{    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;     background-image: linear-gradient(rgba(221, 210, 49, 0.2), #FFFDD0);
   padding: 20px 0;}
   a:link {
     color:var(--mainDark);
     background-color: transparent;
     text-decoration: none !important;
+    
+   
   }
   
   a:visited {
