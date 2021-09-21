@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/Home";
-import Contactus from "./components/Contactus";
+
 import DefaultPage from "./components/DefaultPage";
 import Modal from "./components/Modal";
 import Footer from "./components/Footer";
@@ -58,18 +58,7 @@ class App extends Component {
             </React.Fragment>
           )}
         />
-         <Route
-          exact path="/contactus"
-          render={() => (
-            <React.Fragment>
-              <NavBar />
-              <Contactus/>
-              <Footer/>
-              
-              
-            </React.Fragment>
-          )}
-        />
+       
 
         <Route component={DefaultPage} />
       </Switch>

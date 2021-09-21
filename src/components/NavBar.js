@@ -38,21 +38,17 @@ export default class NavBar extends Component {
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav className="ms-auto" navbar>
-                                <NavItem className="nav-item">
-                                    <NavLink className="nav-link" to="/">
+                                <NavItem className="nav-item" >
+                                    <NavLink className="nav-link " to="/">
                                          Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/shop">
+                                    <NavLink className="nav-link " to="/shop">
                                         Shop
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                     Contact Us
-                                    </NavLink>
-                                </NavItem>
+                             
                                 <NavItem >
                                     <NavLink className="nav-link "  to="/cart">
                                       

@@ -39,8 +39,9 @@ color:var(--mainDark) !important;
 .nav-link{
 
   color:var(--mainDark) !important;
-  font-size:1.3rem;
-  letter-spacing: .25rem;
+  font-size:1.5rem;
+  letter-spacing: .3rem;
+  margin-right: 2rem;
   
 }
 
@@ -203,11 +204,12 @@ overflow:hidden;
 
 .site-footer
 {       background-image: linear-gradient(rgba(221, 210, 49, 0.2), #FFFDD0);
-  padding: 20px 0;}
+  padding: 10px 0;}
   a:link {
     color:var(--mainDark);
     background-color: transparent;
     text-decoration: none !important;
+    margin:0%;
     
    
   }
