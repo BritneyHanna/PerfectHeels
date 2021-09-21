@@ -75,18 +75,78 @@ this.setState(()=>{
 };
 
 increment=(id)=>{
-  console.log('filler text for increment method')
+let tempCart=[...this.state.shoppingcart]
+const selectedProduct =tempCart.find(item=>item.id===id)
+const index= tempCart.indexOf(selectedProduct);
+const product=tempCart[index];
+product.count= product.count +1;
+product.total =product.count*product.price;
+
+this.setState(()=>{
+return{shoppingcart:[...tempCart]}
+},()=>{
+this.addTotals()
+})
+
 };
 
 decrement=(id)=>{
-  console.log('filler text for decrement method')
-};
+  let tempCart=[...this.state.shoppingcart]
+  const selectedProduct =tempCart.find(item=>item.id===id)
+  const index= tempCart.indexOf(selectedProduct);
+  const product=tempCart[index];
+  product.count=product.count-1;
+
+  if(product.count===0){
+    this.removeItem(id)
+  }
+
+  else{
+    product.total=product.count*product.price;
+    this.setState(()=>{
+      return{shoppingcart:[...tempCart]}
+      },()=>{
+      this.addTotals()
+      })
+    };
+  }
+  
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
 
 removeItem=(id)=>{
   let tempProducts=[...this.state.products];
   let tempCart= [...this.state.shoppingcart];
   tempCart=tempCart.filter(item=>item.id!==id);
-  
+  const index= tempProducts.indexOf(this.getItem(id));
+  let removedProduct=tempProducts[index];
+  removedProduct.count=0;
+  removedProduct.inCart=false;
+  removedProduct.total=0;
+
+
+
+  this.setState(()=>{
+   return{
+     shoppingcart:[...tempCart],
+     products:[...tempProducts]
+   } 
+    },()=>{
+      this.addTotals();
+    })
+
 
 };
 
